@@ -11,7 +11,11 @@
 	<script type="text/javascript" src="js/utils.js"></script>
 	<script type="text/javascript">
 		window.onload = function(){
-			var oGobang = new Gobang({canvasId: "gobang", whiteFirst: true});
+			var oGobang = new Gobang({
+				canvasId: "gobang", 
+				whiteFirst: true,
+				imgUrl: "image/background1.png"
+			});
 			oGobang.init();
 		};
 	</script>

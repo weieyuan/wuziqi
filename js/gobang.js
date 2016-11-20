@@ -1,6 +1,7 @@
 var Gobang = function(options) {
 	this.options = Object.assign({
-		canvasId: undefined
+		canvasId: undefined,
+		imgUrl: undefined
 	}, options);
 	this.grid = new Array(15);
 	//0表示下白棋，1表示下黑棋
@@ -33,7 +34,7 @@ Gobang.prototype.initParams = function() {
 };
 Gobang.prototype.drawBackgroundImg = function(oAfterLoadImg) {
 	var img = new Image();
-	img.src = "image/background1.png";
+	img.src = this.options.imgUrl;
 	img.onload = function() {
 		this.context.drawImage(img, 0, 0, this.canvasWidth, this.canvasHeight);
 		oAfterLoadImg();
