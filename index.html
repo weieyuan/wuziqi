@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>五子棋大战</title>
+	<link rel="stylesheet" type="text/css" href="css/gobang.css">
+</head>
+<body>
+	<canvas id="gobang" width="600px"; height="600px"; class="gobang"></canvas>
+	<script type="text/javascript" src="js/gobang.js"></script>
+	<script type="text/javascript" src="js/utils.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			var oGobang = new Gobang({canvasId: "gobang", whiteFirst: true});
+			oGobang.init();
+		};
+	</script>
+</body>
+</html>
